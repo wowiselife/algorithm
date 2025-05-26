@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",                     // 目标 JS 版本
+    "module": "CommonJS",                   // Node 使用 CommonJS
+    "moduleResolution": "node",             // 让编译器像 Node 一样解析模块
+    "esModuleInterop": true,                // 支持 `import fs from 'fs'`
+    "outDir": "./dist",                     // 编译输出目录
+    "rootDir": "./src",                     // 源文件目录（推荐）
+    "strict": true,                         // 开启严格模式
+    "skipLibCheck": true
+  },
+  "include": ["src"]                        // 只编译 src 目录
+}
+
