@@ -11,7 +11,7 @@ create time: 20250530
 
 ```bash
 
-npm init -
+npm init -y
 ```
 
 ---
@@ -68,7 +68,26 @@ your-project/
 
 ---
 
-### ✅ 步骤五：运行 TypeScript 文件
+### 步骤五：（可选）添加运行脚本到 `package.json`
+
+```json
+"scripts": {
+  "start": "ts-node src/index.ts",
+  "build": "tsc",
+  "serve": "node dist/index.js"
+},
+```
+
+这样你就可以用：
+
+```bash
+npm run start   # 直接运行 TypeScript
+npm run build   # 编译为 JavaScript
+npm run serve   # 运行已编译好的代码
+```
+
+
+### ✅ 步骤六：（可选）运行 TypeScript 文件
 
 **临时运行：**
 
@@ -83,22 +102,4 @@ npx tsc           # 编译成 JS 文件（输出到 dist 目录）
 node dist/index.js
 ```
 
----
-
-### ✅ （可选）添加运行脚本到 `package.json`
-
-```json
-"scripts": {
-  "start": "ts-node src/index.ts",
-  "build": "tsc",
-  "serve": "node dist/index.js"
-}
-```
-
-这样你就可以用：
-
-```bash
-npm run start   # 直接运行 TypeScript
-npm run build   # 编译为 JavaScript
-npm run serve   # 运行已编译好的代码
-```
+### 
